@@ -105,7 +105,7 @@ const ProductCard = ({ prod }) => {
             )} */}
             {/* {console.log("cart", cart.indexOf(prod))} */}
 
-            {/* <Tooltip
+            <Tooltip
               label={
                 prod.inStock
                   ? cart.find((item) => item.id === prod.id)
@@ -117,7 +117,7 @@ const ProductCard = ({ prod }) => {
               placement={"top"}
               color={"gray.800"}
               fontSize={"1.2em"}
-            > */}
+            >
             <chakra.a href={"#"} display={"flex"}>
               {cart.some((p) => p.id === prod.id) ? (
                 <IconButton
@@ -148,7 +148,7 @@ const ProductCard = ({ prod }) => {
                 />
               )}
             </chakra.a>
-            {/* </Tooltip> */}
+            </Tooltip>
           </Flex>
 
           <Flex justifyContent="space-between" alignContent="center">

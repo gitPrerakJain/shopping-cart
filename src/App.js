@@ -10,12 +10,12 @@ function App() {
     <BrowserRouter>
       <div className="App">
         <Routes>
-          {/* <Route element={<RootLayout />}> */}
+          <Route element={<RootLayout />}>
 
           <Route index element={<Home />} />
           <Route path="/cart" element={<CartPage />} />
           <Route path="*" element={<NotFound />} />
-          {/* </Route> */}
+          </Route>
         </Routes>
       </div>
     </BrowserRouter>
