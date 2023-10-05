@@ -23,7 +23,7 @@ const CartPage = () => {
         marginTop={"11vh"}
         width={"full"}
       >
-        {cart.length > 0 ? "Your Shopping Cart" : "Empty Cart"}
+        {cart.length > 0 ? "Your Shopping Cart" : "No products present in cart"}
       </Box>
       <Box
         // border={"20px solid red"}

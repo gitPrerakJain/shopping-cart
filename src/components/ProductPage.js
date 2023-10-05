@@ -49,7 +49,7 @@ const ProductPage = () => {
       mt={["auto", "12vh"]}
       justifyContent={"space-around"}
       // border={"2px solid red"}
-      width={["100%", "65%", "75%"]}
+      width={["95%", "65%", "75%"]}
       boxShadow={" 7px 1px 31px -4px rgba(0,0,0,0.75)"}
     >
       {/* <SimpleGrid columns={[1, 2, 3]} spacing={5}> */}

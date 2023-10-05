@@ -57,6 +57,7 @@ const ProductCard = ({ prod }) => {
       overflow={"hidden"}
       maxWidth={"22rem"}
       // m={2}
+
       py={2}
       px={2}
       alignItems="center"
@@ -103,7 +104,8 @@ const ProductCard = ({ prod }) => {
               cart.find((item) => item.id == prod.id)
             )} */}
             {/* {console.log("cart", cart.indexOf(prod))} */}
-            <Tooltip
+
+            {/* <Tooltip
               label={
                 prod.inStock
                   ? cart.find((item) => item.id === prod.id)
@@ -115,38 +117,38 @@ const ProductCard = ({ prod }) => {
               placement={"top"}
               color={"gray.800"}
               fontSize={"1.2em"}
-            >
-              <chakra.a href={"#"} display={"flex"}>
-                {cart.some((p) => p.id === prod.id) ? (
-                  <IconButton
-                    onClick={() => {
-                      // scrollTo({ left: 0, top: 1000 });
-                      dispatch({
-                        type: "REMOVE_FROM_CART",
-                        payload: prod,
-                      });
-                    }}
-                    icon={<IoBagRemove />}
-                    fontSize={"2xl"}
-                    alignSelf={"center"}
-                    color={"red"}
-                  />
-                ) : (
-                  <IconButton
-                    onClick={() => {
-                      dispatch({
-                        type: "ADD_TO_CART",
-                        payload: prod,
-                      });
-                    }}
-                    isDisabled={!prod.inStock}
-                    icon={<IoBagAdd />}
-                    fontSize={"2xl"}
-                    alignSelf={"center"}
-                  />
-                )}
-              </chakra.a>
-            </Tooltip>
+            > */}
+            <chakra.a href={"#"} display={"flex"}>
+              {cart.some((p) => p.id === prod.id) ? (
+                <IconButton
+                  onClick={() => {
+                    // scrollTo({ left: 0, top: 1000 });
+                    dispatch({
+                      type: "REMOVE_FROM_CART",
+                      payload: prod,
+                    });
+                  }}
+                  icon={<IoBagRemove />}
+                  fontSize={"2xl"}
+                  alignSelf={"center"}
+                  color={"red"}
+                />
+              ) : (
+                <IconButton
+                  onClick={() => {
+                    dispatch({
+                      type: "ADD_TO_CART",
+                      payload: prod,
+                    });
+                  }}
+                  isDisabled={!prod.inStock}
+                  icon={<IoBagAdd />}
+                  fontSize={"2xl"}
+                  alignSelf={"center"}
+                />
+              )}
+            </chakra.a>
+            {/* </Tooltip> */}
           </Flex>
 
           <Flex justifyContent="space-between" alignContent="center">

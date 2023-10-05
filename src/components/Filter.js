@@ -23,6 +23,7 @@ const Filter = () => {
       // marginLeft={"25px"}
       position={["", "sticky"]}
       marginTop={"12vh"}
+      marginBottom={[10]}
       top={"12vh"}
       padding={2}
       rounded={"xl"}
@@ -31,7 +32,7 @@ const Filter = () => {
       display={["block", "flex"]}
       justifyContent={"center"}
       h={["auto", "100vh"]}
-      width={["100%", "20%"]}
+      width={["95%", "20%"]}
       boxShadow={" 7px 1px 31px -4px rgba(0,0,0,0.75)"}
     >
       <VStack mx={"auto"} align={"center"}>
@@ -46,7 +47,7 @@ const Filter = () => {
           Sort by:
         </Text>
 
-        <RadioGroup textAlign={"center"} m={4}>
+        <RadioGroup textAlign={"center"} m={4} value={sort}>
           <Radio
             onChange={() => {
               filterDispatch({
@@ -56,8 +57,8 @@ const Filter = () => {
             }}
             size="lg"
             m={4}
-            value="asc"
-            checked={sort === "LTH" ? true : false}
+            value="LTH"
+            isChecked={sort === "LTH" ? true : false}
           >
             Price: Low to High
           </Radio>
@@ -70,8 +71,8 @@ const Filter = () => {
             }}
             size="lg"
             m={4}
-            value="desc"
-            checked={sort === "HTL" ? true : false}
+            value="HTL"
+            isChecked={sort === "HTL" ? true : false}
           >
             Price: High to low
           </Radio>
@@ -92,7 +93,7 @@ const Filter = () => {
           size="lg"
           m={4}
           mt={0}
-          checked={byNew}
+          isChecked={byNew}
           // colorScheme="orange"
         >
           New Products
@@ -103,7 +104,7 @@ const Filter = () => {
           }}
           size="lg"
           m={4}
-          checked={byFastDel}
+          isChecked={byFastDel}
           // colorScheme="orange"
         >
           Fast Delivery only
@@ -114,7 +115,7 @@ const Filter = () => {
           }}
           size="lg"
           m={4}
-          checked={byStock}
+          isChecked={byStock}
           // colorScheme="orange"
           // defaultChecked
         >

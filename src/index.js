@@ -7,10 +7,10 @@ import Context from "./context/Context";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Context>
-      <ChakraProvider>
+    <ChakraProvider>
+      <Context>
         <App />
-      </ChakraProvider>
-    </Context>
+      </Context>
+    </ChakraProvider>
   </React.StrictMode>
 );
